@@ -1,0 +1,48 @@
+' Gambas class file
+
+
+
+Sub closes(a As String)
+Print "closes"
+	Shell ("bash -c 'cat " & Application.Path & "//1' >>" & Application.Path & "//" & a)
+End Sub 
+Sub texts(a As String, b As String)
+Dim f1 As File 
+Dim aa As String 
+Print "texts"
+Sleep 2
+f1 = Open Application.Path & "/" & a For Append 
+aa = Replace(b, "\n", "<br>", 1)
+Print #f1, aa & "<br>"
+Close f1
+Sleep 2
+End Sub 
+
+
+
+Public Sub form_Close()
+  
+  
+  
+End
+
+Public Sub Form_Open()
+
+End
+
+
+Public Sub Button5_Click()
+
+  TextArea1.text = ""
+
+End
+
+Public Sub Button6_Click()
+Dim n As Integer
+  Print Application.Path
+  Shell "bash -c 'cp " & Application.Path & "//0 " & Application.Path & "//" & TextBox1.Text & "'"
+  Sleep 1
+    texts(TextBox1.Text, TextArea1.text)
+    Sleep 1
+closes(TextBox1.Text)
+End

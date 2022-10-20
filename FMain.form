@@ -1,0 +1,31 @@
+# Gambas Form File 3.0
+
+{ Form Form
+  MoveScaled(0,0,56,35)
+  Font = Font["-2"]
+  Background = &H2FBF2F&
+  Text = ("html forms")
+  { Label1 Label
+    MoveScaled(1,1,11,3)
+    Text = ("file name:")
+  }
+  { TextBox1 TextBox
+    MoveScaled(13,1,36,3)
+    Background = Color.Green
+    Text = ("new.html")
+  }
+  { Button5 Button
+    MoveScaled(1,28,19,3)
+    Background = Color.Green
+    Text = ("clear")
+  }
+  { Button6 Button
+    MoveScaled(1,31,40,4)
+    Background = Color.Green
+    Text = ("build")
+  }
+  { TextArea1 TextArea
+    MoveScaled(1,4,54,24)
+    Background = Color.Green
+  }
+}
